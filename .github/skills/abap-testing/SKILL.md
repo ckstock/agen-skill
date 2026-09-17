@@ -5,9 +5,19 @@ description: 为 ABAP 变更设计和执行语法检查、ATC、ABAP Unit、集�
 
 # ABAP Testing
 
+## [元数据层 Metadata]
+
+顶部 frontmatter 的 `name` 和 `description` 定义本技能的名称和触发场景。
+
+## [指令层 Instruction]
+
 - 最小检查：语法检查、激活、ATC（若项目启用）。
 - 单元逻辑：覆盖正常值、空值、边界值和异常值。
 - 数据库逻辑：验证空结果、已有数据、重复键、权限失败和事务回滚。
 - 接口逻辑：验证成功响应、业务错误、技术异常、超时和重试影响。
 - 报表/选择屏幕：验证选择条件、组合条件、无结果和结果字段。
 - 记录实际事务/程序、输入、用户或测试配置、结果和未覆盖场景。
+
+## [资源层 Resource]
+
+测试记录模板见 [../abap-workflow/assets/review-template.md](../abap-workflow/assets/review-template.md)。

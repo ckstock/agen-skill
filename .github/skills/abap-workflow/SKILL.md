@@ -5,6 +5,12 @@ description: ABAP 项目开发总流程。新增功能、修复 bug、重构、�
 
 # ABAP Workflow
 
+## [元数据层 Metadata]
+
+本文件顶部 frontmatter 中的 `name` 和 `description` 用于技能发现和触发匹配。
+
+## [指令层 Instruction]
+
 ## 开始前
 
 1. 明确业务目标、输入输出、异常路径和验收口径。
@@ -27,3 +33,9 @@ description: ABAP 项目开发总流程。新增功能、修复 bug、重构、�
 3. 检查消息文本、声明位置、选择条件和可传输对象清单。
 4. 同步功能说明、运行手册或接口文档。
 5. 报告已验证项、未验证项和剩余风险。
+
+## [资源层 Resource]
+
+- 详细规范：[ABAP conventions](./references/abap-conventions.md)
+- 自动检查：[validate-skill-structure.ps1](./scripts/validate-skill-structure.ps1)
+- 审查模板：[review-template.md](./assets/review-template.md)

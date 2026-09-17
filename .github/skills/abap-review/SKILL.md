@@ -5,6 +5,12 @@ description: ABAP 代码提交、传输或合并前进行影响范围、安全�
 
 # ABAP Review
 
+## [元数据层 Metadata]
+
+顶部 frontmatter 的 `name` 和 `description` 定义本技能的名称和触发场景。
+
+## [指令层 Instruction]
+
 ## 必查项
 
 - Git diff 与对象实际变更一致，没有无关文件、调试代码或本机路径。
@@ -17,3 +23,7 @@ description: ABAP 代码提交、传输或合并前进行影响范围、安全�
 ## 结果格式
 
 按“阻断问题、非阻断风险、已验证项、未验证项、建议”输出。
+
+## [资源层 Resource]
+
+审查输出模板见 [../abap-workflow/assets/review-template.md](../abap-workflow/assets/review-template.md)。
