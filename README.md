@@ -4,7 +4,7 @@
 
 ## 三层架构
 
-本仓库严格按三层组织，每个技能目录都在 `SKILL.md` 中标注层级：
+本仓库严格按三层组织，架构总览集中放在 `.github/skills/00-ARCHITECTURE/`；真正会被 Agent 加载的技能仍直接放在 `.github/skills/` 下：
 
 1. **元数据层（Metadata）**：`SKILL.md` 顶部 YAML frontmatter 的 `name` 和 `description`，负责技能发现和触发匹配。
 2. **指令层（Instruction）**：`SKILL.md` 正文，负责告诉 Agent 何时使用、按什么步骤执行、如何验收。
@@ -18,7 +18,7 @@
 - `.github/skills/abap-testing/`：语法、ATC、单元测试和真实业务验证
 - `.github/skills/abap-review/`：提交前的影响范围、安全和传输对象检查
 
-每个技能的三层标记均位于对应目录的 `SKILL.md`；例如 `abap-workflow` 的资源层包含 `references/`、`scripts/` 和 `assets/` 示例。
+三层说明不再重复复制到每个技能文件；每个 `SKILL.md` 只保留自己的元数据和执行指令，资源统一从技能目录的资源链接读取。
 
 在 VS Code 中打开 Copilot Chat，输入 `/skills` 可以查看技能；也可以直接描述 ABAP 任务，让 Agent 按 `description` 自动选择技能。
 
