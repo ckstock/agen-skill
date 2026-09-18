@@ -17,6 +17,7 @@ description: ABAP 项目开发总流程。新增功能、修复 bug、重构、�
 2. 查看 Git 状态和现有差异，保留未授权改动。
 3. 判断任务类型并读取对应技能：编码、调试、测试或审查。
 4. 涉及公共类、函数模块、BAdI、RFC、数据库写入或接口字段时，先列出调用方和影响范围。
+5. 需要实现功能时，先读取 `assets/component-index.yaml`；涉及工具或封装类时，再读取 `assets/tools/abap-tools.yaml`。优先复用现成组件，只有不存在或签名不匹配时才新写实现。
 
 ## 实施
 
@@ -24,6 +25,7 @@ description: ABAP 项目开发总流程。新增功能、修复 bug、重构、�
 - 选择屏幕字段描述按项目约定使用 `%_p_m8_%_app_%-TEXT = 'XXX'.` 和 `%_p_kurst_%_app_%-TEXT = 'XXX'.` 等明确形式。
 - 业务逻辑与 UI、数据库、外部接口职责分离。
 - 不凭猜测修改 DDIC、权限、RFC 或传输对象。
+- 遵循简明 Clean Code：方法短小、单一职责、命名表达意图、减少嵌套和重复，明确处理异常、空数据和 `sy-subrc`。
 - 新增逻辑应有可复查的验证步骤。
 
 ## 完成前
@@ -37,5 +39,7 @@ description: ABAP 项目开发总流程。新增功能、修复 bug、重构、�
 ## [资源层 Resource]
 
 - 详细规范：[ABAP conventions](./references/abap-conventions.md)
+- 组件索引：[component-index.yaml](./assets/component-index.yaml)
+- 私有工具集：[abap-tools.yaml](./assets/tools/abap-tools.yaml)
 - 自动检查：[validate-skill-structure.ps1](./scripts/validate-skill-structure.ps1)
 - 审查模板：[review-template.md](./assets/review-template.md)

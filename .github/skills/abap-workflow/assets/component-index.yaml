@@ -1,0 +1,28 @@
+version: 1
+purpose: 先查找系统已有封装和项目资产，再决定是否需要新写代码。
+components:
+  - id: send-mail-attachment
+    file: assets/components/send-mail-attachment.abap
+    capability: 发送邮件并携带单个附件
+    system_candidates: [zcl_api=>send_mail_attachment]
+    verify: 以当前系统类定义和方法签名为准
+  - id: submit-alv
+    file: assets/components/submit-alv.abap
+    capability: SUBMIT 报表并接收动态 ALV
+    system_candidates: [zcl_my_tools=>submit_alv]
+    verify: 以当前系统帮助类实际签名为准
+  - id: http-json
+    file: assets/components/http-json.abap
+    capability: HTTP/JSON 推送
+    system_candidates: [zcl_https]
+    verify: 以当前系统 HTTP 帮助类和返回结构为准
+  - id: selection-screen-text
+    file: assets/components/selection-screen-text.abap
+    capability: 选择屏幕字段文本初始化
+    system_candidates: [selection-screen events]
+    verify: 以当前报表字段名为准
+
+reuse_policy:
+  - 先读取 index，再读取匹配组件资产。
+  - 优先调用现成组件；只有组件不存在或签名不匹配时才设计新实现。
+  - 组件中的 z* 名称是系统候选，不是可盲目复制的固定 API。

@@ -17,8 +17,9 @@
 - `.github/skills/abap-debugging/`：Dump、RFC、ALV 和运行时问题排查
 - `.github/skills/abap-testing/`：语法、ATC、单元测试和真实业务验证
 - `.github/skills/abap-review/`：提交前的影响范围、安全和传输对象检查
+- `.github/skills/ops-workflow/`：部署、升级、日志、备份恢复、监控和故障交接
 
-三层说明不再重复复制到每个技能文件；每个 `SKILL.md` 只保留自己的元数据和执行指令，资源统一从技能目录的资源链接读取。
+三层说明不再重复复制到每个技能文件；每个 `SKILL.md` 只保留自己的元数据和执行指令，资源统一从技能目录的资源链接读取。ABAP 现成组件和私有工具集索引统一放在 `abap-workflow/assets/`，避免各个 ABAP 子技能重复实现。
 
 在 VS Code 中打开 Copilot Chat，输入 `/skills` 可以查看技能；也可以直接描述 ABAP 任务，让 Agent 按 `description` 自动选择技能。
 

@@ -1,0 +1,22 @@
+name: abap-tools
+source:
+  repository: https://github.com/ckstock/abap-tools
+  access: private
+  role: ABAP 系统工具集与可复用实现的权威来源
+
+usage:
+  - 生成代码前先搜索该仓库是否已有对应工具、类、函数、模板或示例。
+  - 找到匹配实现时优先复用其调用方式，不重新发明同类封装。
+  - 将仓库中的代码复制到业务程序前，确认目标 SAP 系统已安装同名对象并核对实际签名。
+  - 如果本地没有仓库副本或无法访问，明确说明“工具集未读取”，不要假设对象存在。
+
+routing:
+  mail: 优先搜索邮件、附件、SOST、二进制转换相关工具
+  alv: 优先搜索 ALV、动态内表、字段目录、SUBMIT 相关工具
+  http-json: 优先搜索 HTTP、JSON、鉴权、OA 推送相关工具
+  file: 优先搜索前台上传、下载、Excel、TXT、编码转换相关工具
+
+local_checkout:
+  recommended_path: tools/abap-tools
+  ignored_from_commit: true
+  reason: 私有工具集源码不应复制进 agen-skill；agen-skill 只保存索引和使用约定
