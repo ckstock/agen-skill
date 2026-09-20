@@ -13,7 +13,10 @@
 - 选择屏幕可使用 block、function key 和 `AT SELECTION-SCREEN OUTPUT` / `AT SELECTION-SCREEN`。
 
 关键布局示例：
-
+ DATA: GS_fieldcat     TYPE lvc_s_fcat, 
+       Gt_fieldcat     TYPE lvc_t_fcat, 
+       GS_layout       TYPE lvc_s_layo. 
+       
 ```abap
 CLEAR gs_layout.
 gs_layout-cwidth_opt = 'A'.
@@ -25,7 +28,7 @@ gs_layout-info_fname = 'LINE_COLOR'.
 gs_layout-ctab_fname = 'CELL_COLOR'.
 gs_layout-stylefname = 'CELLSTYLES'.
 ```
-
+使用新式 REUSE_ALV_GRID_DISPLAY_LVC
 字段目录示例：
 
 ```abap
