@@ -32,6 +32,21 @@ gs_layout-stylefname = 'CELLSTYLES'.
 字段目录示例：
 
 ```abap
+FORM frm_set_fieldcat .
+  CLEAR: gt_fieldcat,gs_fieldcat.
+  gs_fieldcat-key =  'X'.      "设置为关键列
+  PERFORM set_fieldcat USING  ' ' ' '  'COUNT' '条目数'.
+  gs_fieldcat-key =  'X'.      "设置为关键列
+  gs_fieldcat-icon = 'X'.
+  PERFORM set_fieldcat USING ''  ''  'SEP_FLAG' '结果标识'   .
+  "GS_fieldcat-edit_mask = '==Z0001'.
+  "GS_fieldcat-do_sum = 'X'.
+  gs_fieldcat-decimals = '2'.
+  gs_fieldcat-do_sum = 'X'.
+  PERFORM  set_fieldcat  USING  'MSEG'  'MJAHR'  'MJAHR'  '年份'    .
+
+ENDFORM .
+
 FORM set_fieldcat USING VALUE(p_ref_table) VALUE(p_ref_field) VALUE(p_fieldname) VALUE(p_text).
   gs_fieldcat-ref_table = p_ref_table.
   gs_fieldcat-ref_field = p_ref_field.
