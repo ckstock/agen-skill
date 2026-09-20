@@ -1,6 +1,6 @@
-# Agen Skill
+# Agent ABAP
 
-面向 ABAP 开发与运维的 Agent Skill，兼容 VS Code + GitHub Copilot Agent。
+面向 ABAP 开发与运维的 Agent Skill，仓库名为 `agent-abap`，兼容 VS Code + GitHub Copilot Agent。
 
 ## 最终架构
 

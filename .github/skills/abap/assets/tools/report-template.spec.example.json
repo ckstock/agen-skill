@@ -1,0 +1,43 @@
+{
+  "program": "zmm_report",
+  "dbTable": "mara",
+  "selection": [
+    {
+      "name": "MATNR",
+      "refTable": "MARA",
+      "refField": "MATNR",
+      "required": false,
+      "kind": "P",
+      "text": "物料编号"
+    },
+    {
+      "name": "GJAHR",
+      "refTable": "MSEG",
+      "refField": "MJAHR",
+      "required": true,
+      "kind": "S",
+      "text": "会计年度"
+    }
+  ],
+  "fields": [
+    {
+      "name": "MATNR",
+      "refTable": "MARA",
+      "refField": "MATNR",
+      "text": "物料"
+    },
+    {
+      "name": "GJAHR",
+      "refTable": "MSEG",
+      "refField": "MJAHR",
+      "text": "会计年度"
+    }
+  ],
+  "controls": {
+    "selection": true,
+    "count": true,
+    "rowColor": true,
+    "cellColor": true,
+    "editStyle": true
+  }
+}

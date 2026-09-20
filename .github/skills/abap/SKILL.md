@@ -15,7 +15,8 @@ description: ABAP 领域统一开发入口，覆盖编码、调试、测试、�
 |---|---|---|
 | 编码、重构、Clean Code | `references/core.md`、`references/naming.md` | `assets/INDEX.md` |
 | 选择屏幕 | `references/selection-screen.md` | `assets/components/selection-screen-text.abap` |
-| 经典 ALV | `references/alv/classic-alv.md` | `assets/components/` |
+| 经典 ALV | `references/alv/classic-alv.md` | `assets/components/classic-alv.abap`、`scripts/generate-classic-alv.ps1` |
+| Excel 报表模板生成 | `references/report-template-compiler.md` | `scripts/compile-report-template.py`、`assets/tools/report-template.spec.example.json` |
 | SUBMIT 动态 ALV | `references/alv/submit-alv.md` | `assets/components/submit-alv.abap` |
 | HTTP/JSON | `references/integration/http-json.md` | `assets/components/http-json.abap` |
 | 邮件附件 | `references/integration/mail-attachment.md` | `assets/components/send-mail-attachment.abap` |
@@ -26,10 +27,12 @@ description: ABAP 领域统一开发入口，覆盖编码、调试、测试、�
 
 1. 先读取 `assets/INDEX.md`，再决定使用哪个现成组件。
 2. 涉及工具或封装类时读取 `assets/tools/abap-tools.md`，优先查询私有 `ckstock/abap-tools`。
-3. 优先复用已有系统组件；只有确认不存在或方法签名不匹配时才新写实现。
-4. 以当前 SAP 系统源码、方法签名和 DDIC 定义为准，不凭猜测修改对象。
-5. 遵循 Clean Code：方法短小、单一职责、命名表达意图、减少嵌套和重复。
-6. 明确处理空数据、返回值、`sy-subrc`、异常、前后台差异和敏感信息。
+3. 经典 ALV 生成前，先检查 layout 引用的 `*_fname` 字段是否在输出内表行类型中定义；需要重复生成骨架时优先使用 `scripts/generate-classic-alv.ps1`。
+4. 新建报表可将 Excel/JSON 交给 `scripts/compile-report-template.py --mode new-report`；运维修改必须使用 `--mode maintenance` 并保留源程序结构。
+5. 优先复用已有系统组件；只有确认不存在或方法签名不匹配时才新写实现。
+6. 以当前 SAP 系统源码、方法签名和 DDIC 定义为准，不凭猜测修改对象。
+7. 遵循 Clean Code：方法短小、单一职责、命名表达意图、减少嵌套和重复。
+8. 明确处理空数据、返回值、`sy-subrc`、异常、前后台差异和敏感信息。
 
 ## 完成前
 

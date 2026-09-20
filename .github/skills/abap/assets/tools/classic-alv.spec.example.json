@@ -1,0 +1,32 @@
+{
+  "program": "z_template_classic_alv",
+  "dbTable": "mara",
+  "lineType": "ty_data",
+  "dataTable": "gt_data",
+  "controls": {
+    "selection": true,
+    "count": true,
+    "rowColor": true,
+    "cellColor": true,
+    "editStyle": true,
+    "checkbox": true,
+    "dropdown": true,
+    "resultFlag": true
+  },
+  "fields": [
+    {
+      "name": "MATNR",
+      "refTable": "MARA",
+      "refField": "MATNR",
+      "text": "物料"
+    },
+    {
+      "name": "COUNT",
+      "text": "条目数"
+    },
+    {
+      "name": "SEP_FLAG",
+      "text": "结果标识"
+    }
+  ]
+}

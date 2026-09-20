@@ -17,4 +17,4 @@ Get-ChildItem -LiteralPath $SkillsRoot -Directory | ForEach-Object {
     }
 }
 if ($errors.Count) { $errors | ForEach-Object { Write-Error $_ }; exit 1 }
-Write-Output 'Agen Skill three-layer structure passed.'
+Write-Output 'Agent ABAP three-layer structure passed.'

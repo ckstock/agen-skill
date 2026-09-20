@@ -19,4 +19,4 @@ routing:
 local_checkout:
   recommended_path: tools/abap-tools
   ignored_from_commit: true
-  reason: 私有工具集源码不应复制进 agen-skill；agen-skill 只保存索引和使用约定
+  reason: 私有工具集源码不应复制进 agent-abap；agent-abap 只保存索引和使用约定
