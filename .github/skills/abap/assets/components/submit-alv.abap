@@ -5,6 +5,7 @@ FIELD-SYMBOLS <lt_data> TYPE STANDARD TABLE.
 
 CLEAR gt_parameters.
 APPEND VALUE #( selname = 'S_BUKRS' kind = 'S' sign = 'I' option = 'EQ' low = '1234' ) TO gt_parameters.
+APPEND LINES OF VALUE rsparams_tt( FOR wa_zdate IN s_zdate ( CORRESPONDING #( BASE ( VALUE #( selname = 'S_ZDATE' kind = 'S' ) ) wa_zdate ) ) ) TO gt_parameters.
 lr_data = zcl_my_tools=>submit_alv(
   iv_program    = 'ZMM038'
   it_parameters = gt_parameters ).
