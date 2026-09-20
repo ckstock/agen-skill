@@ -1,5 +1,6 @@
 " Reusable pattern: verify zcl_api=>send_mail_attachment in the target SAP system first.
-"发件人用这个 ZCL_API=>MAIL_SENDER
+"发件人用  ZCL_API=>MAIL_SENDER
+"抄送人用  ZCL_API=>MAIL_CC
 zcl_api=>send_mail_attachment(
   EXPORTING
     iv_mail_from       = lv_mail_from
